@@ -1,4 +1,11 @@
-vim-dotfiles
+Saicheg dotfiles
 ============
+My personal dotfiles to setup system behaviour as i want to.
 
-my personal vim config files and etc
+# Setup
+
+```
+git clone git@github.com:Saicheg/dotfiles.git
+cd dotfiles/
+rake install
+```
