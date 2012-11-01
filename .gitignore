@@ -1,0 +1,5 @@
+.vim/bundle/*.vim
+.vim/tmp/
+.vim/tags
+.vim/.netrwhist
+
