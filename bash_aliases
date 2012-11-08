@@ -22,8 +22,6 @@ alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%
 
 # RMO
 alias rmo-cd="cd ~/Projects/RentMineOnline/;"
-alias rmo-user-upd="mysql --user=root --password=root --database=rmo_development < ~/Projects/RentMineOnline/private/sql/user.sql"
-alias rmo-mysql="mysql --user=root --password=root --database=rmo_development"
 
 # Zeus
 alias zs='zeus server'
