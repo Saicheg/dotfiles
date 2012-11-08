@@ -9,7 +9,7 @@ alias rs="rails server"
 alias rc="rails console"
 alias pr="pry -r ./config/environment -r rails/console/app -r rails/console/helpers"
 alias rr="rake routes"
-alias rrg="routes | grep "
+alias rrg="rake routes | grep "
 
 # Git
 alias gs="git status"
