@@ -3,6 +3,7 @@ alias grep='grep --color=auto'
 alias c="clear"
 alias ie7="wine 'C:\Program Files\Internet Explorer\iexplore'"
 alias frspec="SKIP_SLOW=true rspec"
+alias shoes="~/Programs/shoes/dist/shoes"
 
 # Rails
 alias rs="rails server"
