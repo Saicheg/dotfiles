@@ -10,7 +10,7 @@ alias rs="rails server"
 alias rc="rails console"
 alias pr="pry -r ./config/environment -r rails/console/app -r rails/console/helpers"
 alias rr="rake routes"
-alias rrg="routes | grep "
+alias rrg="rake routes | grep "
 
 # Git
 alias gs="git status"
@@ -23,8 +23,6 @@ alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%
 
 # RMO
 alias rmo-cd="cd ~/Projects/RentMineOnline/;"
-alias rmo-user-upd="mysql --user=root --password=root --database=rmo_development < ~/Projects/RentMineOnline/private/sql/user.sql"
-alias rmo-mysql="mysql --user=root --password=root --database=rmo_development"
 
 # Zeus
 alias zs='zeus server'
