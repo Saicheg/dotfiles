@@ -20,6 +20,7 @@ alias gd="git diff --color"
 alias gcd="git checkout --"
 alias grр="git reset HEAD"
 alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold yellow)<%an>%Creset' --abbrev-commit --"
+alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 
 # RMO
 alias rmo-cd="cd ~/Projects/RentMineOnline/;"
