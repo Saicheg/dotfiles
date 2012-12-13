@@ -38,6 +38,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/tComment'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-surround'
 
 " Colorschemes
 Bundle 'flazz/vim-colorschemes'
