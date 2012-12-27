@@ -39,6 +39,7 @@ Bundle 'vim-scripts/tComment'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-surround'
+Bundle 'ZenCoding.vim'
 
 " Colorschemes
 Bundle 'flazz/vim-colorschemes'
