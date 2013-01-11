@@ -9,9 +9,13 @@
   branch = auto
 [core]
   excludesfile = <%= ENV['HOME'] %>/.gitignore
-  editor = mate -w
+  editor = vim
   autocrlf = input
 [apply]
   whitespace = nowarn
 [format]
   pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+[merge]
+  tool = meld
+[mergetool]
+  keepBackup = false
