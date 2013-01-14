@@ -40,6 +40,8 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-surround'
 Bundle 'ZenCoding.vim'
+Bundle 'taglist.vim'
+Bundle 'Syntastic'
 
 " Colorschemes
 Bundle 'flazz/vim-colorschemes'
