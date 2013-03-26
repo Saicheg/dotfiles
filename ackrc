@@ -1,0 +1,13 @@
+--type-add=css=.sass,.scss
+--type-add=ruby=.rake,.builder
+--type-add=html=.rhtml,.html.erb,.html.haml,.haml,.slim,.html.slim,.eco,.skim
+--type-add=js=.rjs,.js.erb,.coffee,.js.coffee
+--type-add=xml=.xml.builder
+--ignore-dir=vendor
+--ignore-dir=log
+--ignore-dir=tmp
+--ignore-dir=doc
+--ignore-dir=coverage
+--ignore-dir=public/assets
+--ignore-dir=spec/cassettes
+--sort-files

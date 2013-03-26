@@ -13,6 +13,7 @@ alias rr="rake routes"
 alias rrg="rake routes | grep "
 
 # Git
+alias g="git"
 alias gs="git status"
 alias ga="git add"
 alias gc="git checkout"

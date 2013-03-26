@@ -42,6 +42,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'ZenCoding.vim'
 Bundle 'taglist.vim'
 Bundle 'Syntastic'
+Bundle 'ack.vim'
 
 " Colorschemes
 Bundle 'flazz/vim-colorschemes'
