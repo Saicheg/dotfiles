@@ -43,6 +43,7 @@ Bundle 'ZenCoding.vim'
 Bundle 'taglist.vim'
 Bundle 'Syntastic'
 Bundle 'ack.vim'
+Bundle 'mustache.vim'
 
 " Colorschemes
 Bundle 'flazz/vim-colorschemes'

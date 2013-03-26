@@ -32,3 +32,6 @@ alias zr='zeus rake'
 alias zg='zeus generate'
 alias zc='zeus console'
 alias zt='zeus rspec'
+
+# Fix tmux vim color
+alias tmux="TERM=screen-256color-bce tmux"
