@@ -122,6 +122,12 @@ map <left> <nop>
 map <right> <nop>"
 map <Leader>sp :set paste<CR>
 map <Leader>snp :set nopaste<CR>
+
+" resize current buffer by +/- 5
+nnoremap <C-left> :vertical resize +3<cr>
+nnoremap <C-down> :resize +3<cr>
+nnoremap <C-up> :resize -3<cr>
+nnoremap <C-right> :vertical resize -3<cr>
 " Plugin settngs
 "
 
