@@ -133,6 +133,7 @@ nmap sk :SplitjoinJoin<cr>
 let g:nerdtree_tabs_open_on_console_startup=1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeWinSize = 40
+let g:NERDTreeDirArrows = 0
 let g:nerdtree_tabs_focus_on_files = 1
 let g:nerdtree_tabs_autoclose = 1
 map <Leader>n :NERDTreeTabsToggle<CR>
