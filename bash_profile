@@ -4,3 +4,4 @@ export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=100000000
 export RUBY_HEAP_FREE_MIN=500000
 source /home/ITRANSITION/v.zavadsky/.rvm/scripts/rvm
+LC_ALL=en_US.UTF-8
