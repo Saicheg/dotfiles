@@ -131,6 +131,10 @@ nnoremap <C-right> :vertical resize -3<cr>
 " Plugin settngs
 "
 
+" Zen coding
+let g:user_zen_expandabbr_key = '<c-e>'
+let g:use_zen_complete_tag = 1
+
 " SplitJoin
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
