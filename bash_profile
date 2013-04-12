@@ -6,5 +6,5 @@ export LANGUAGE=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-source /home/ITRANSITION/v.zavadsky/.rvm/scripts/rvm
-
+export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
