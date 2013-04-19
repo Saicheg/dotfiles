@@ -44,6 +44,7 @@ Bundle 'taglist.vim'
 Bundle 'Syntastic'
 Bundle 'ack.vim'
 Bundle 'mustache.vim'
+Bundle 'thoughtbot/vim-rspec'
 
 " Colorschemes
 Bundle 'flazz/vim-colorschemes'
@@ -159,6 +160,10 @@ let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_extensions = ['tag']
 let g:ctrlp_custom_ignore = '\.git$'
 map <C-T> :CtrlPBuffer<CR>
+
+" vim-rspec
+map <Leader>rs :call RunCurrentSpecFile()<CR>
+
 
 " coffeescript.vim
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
