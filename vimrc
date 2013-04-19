@@ -66,7 +66,7 @@ set directory=$HOME/.vim/tmp " Keep swap files there
 set ignorecase  " Case-insensitive search
 set smartcase  " Case-sensetive search if expression contains a capital letter
 set backspace=indent,eol,start    " Intuitive backspacing
-set clipboard=unnamedplus
+set clipboard=unnamed
 set tabstop=2
 set shiftwidth=2
 set expandtab
