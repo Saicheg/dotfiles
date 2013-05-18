@@ -45,6 +45,7 @@ Bundle 'Syntastic'
 Bundle 'ack.vim'
 Bundle 'mustache.vim'
 Bundle 'thoughtbot/vim-rspec'
+Bundle "Chiel92/vim-autoformat"
 
 " Colorschemes
 Bundle 'flazz/vim-colorschemes'
@@ -164,7 +165,6 @@ map <C-T> :CtrlPBuffer<CR>
 " vim-rspec
 map <Leader>rs :call RunCurrentSpecFile()<CR>
 
-
 " coffeescript.vim
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 
@@ -177,3 +177,7 @@ nmap sjs :SplitjoinSplit<CR>
 
 " vim-powerline.vim
 " let g:Powerline_symbols='skwp'
+
+" Ack
+set grepprg=ack
+nnoremap <leader>fw :Ack <c-r><c-w><CR>
