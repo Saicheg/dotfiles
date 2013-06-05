@@ -35,3 +35,6 @@ alias zt='zeus rspec'
 
 # Fix tmux vim color
 alias tmux="TERM=screen-256color-bce tmux"
+
+# Vim
+alias v='vim'

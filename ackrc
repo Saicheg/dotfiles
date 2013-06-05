@@ -10,4 +10,6 @@
 --ignore-dir=coverage
 --ignore-dir=public/assets
 --ignore-dir=spec/cassettes
+--ignore-dir=app/assets/javascripts/i18n/
+--ignore-dir=public/javascripts/
 --sort-files
