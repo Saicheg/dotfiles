@@ -181,3 +181,7 @@ nmap sjs :SplitjoinSplit<CR>
 " Ack
 set grepprg=ack
 nnoremap <leader>fw :Ack <c-r><c-w><CR>
+
+" Syntastic
+let g:syntastic_ruby_exec = "/Users/sai/.rvm/rubies/ruby-2.0.0-p247/bin/ruby"
+let g:syntastic_eruby_checkers=['mri']
