@@ -15,6 +15,14 @@ if defined?(ActiveRecord::Base)
 
 end
 
+if defined?(Rails) && Rails.respond_to?(:logger)
+  require 'logger'
+  Rails.logger = Logger.new($stdout)
+  if defined?(Mongoid)
+    Mongoid.logger = Rails.logger
+  end
+end
+
 # Useful collections
 
 def a

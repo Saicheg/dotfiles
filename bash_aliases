@@ -38,3 +38,7 @@ alias tmux="TERM=screen-256color-bce tmux"
 
 # Vim
 alias v='vim'
+
+# Parallels
+
+alias paralells='sudo rm /Library/Preferences/Parallels/licenses.xml /private/var/root/library/preferences/com.parallels.desktop.plist'

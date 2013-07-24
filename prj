@@ -1,1 +1,2 @@
-~/Projects
+projects_root: ~/Projects
+case_sensitive: false
