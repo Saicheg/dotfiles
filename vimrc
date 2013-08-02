@@ -46,6 +46,7 @@ Bundle 'ack.vim'
 Bundle 'mustache.vim'
 Bundle 'thoughtbot/vim-rspec'
 Bundle "Chiel92/vim-autoformat"
+Bundle "briancollins/vim-jst"
 
 " Colorschemes
 Bundle 'flazz/vim-colorschemes'
@@ -146,8 +147,10 @@ let g:nerdtree_tabs_open_on_console_startup=1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeWinSize = 40
 let g:NERDTreeDirArrows = 0
+let NERDTreeShowHidden=1
 let g:nerdtree_tabs_focus_on_files = 1
 let g:nerdtree_tabs_autoclose = 1
+let NERDTreeIgnore = ['\.git$', '\.DS_Store$']
 map <Leader>n :NERDTreeTabsToggle<CR>
 
 " vim-nerdtree-tabs.vim

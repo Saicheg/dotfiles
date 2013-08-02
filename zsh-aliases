@@ -1,9 +1,6 @@
-alias c="clear"
-alias frspec="SKIP_SLOW=true rspec"
 # Rails
 alias rs="rails server"
 alias rc="rails console"
-alias pr="pry -r ./config/environment -r rails/console/app -r rails/console/helpers"
 alias rr="rake routes"
 alias rrg="rake routes | grep "
 
@@ -18,9 +15,6 @@ alias grр="git reset HEAD"
 alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold yellow)<%an>%Creset' --abbrev-commit --"
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 
-# RMO
-alias rmo-cd="cd ~/Projects/RentMineOnline/;"
-
 # Zeus
 alias zs='zeus server'
 alias zr='zeus rake'
@@ -30,3 +24,12 @@ alias zt='zeus rspec'
 
 # Fix tmux vim color
 alias tmux="TERM=screen-256color-bce tmux"
+
+# Vim
+alias v='vim'
+
+# Sidekiq flush
+alias flush-sidekiq="echo 'flushdb' | redis-cli"
+
+# Parallels
+alias paralells='sudo rm /Library/Preferences/Parallels/licenses.xml /private/var/root/library/preferences/com.parallels.desktop.plist'
