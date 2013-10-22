@@ -3,6 +3,8 @@
 Pry.config.pager = false
 Pry.config.editor = "vim"
 Pry.config.prompt = [proc{"? "}, proc{"| "}]
+# Pry.config.input = STDIN
+# Pry.config.output = STDOUT
 
 if defined?(ActiveRecord::Base)
 

@@ -34,3 +34,6 @@ alias sidekiq-start="flush-sidekiq && sidekiq -C config/sidekiq.yml"
 
 # Parallels
 alias paralells='sudo rm /Library/Preferences/Parallels/licenses.xml /private/var/root/library/preferences/com.parallels.desktop.plist'
+
+# Capistrano
+alias cpd="cap production deploy"
