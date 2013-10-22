@@ -28,13 +28,12 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(gitfast rvm npm command-not-found rake gem bundle dircycle prj vi-mode zsh-notify)
+plugins=(gitfast rvm npm command-not-found rake gem bundle dircycle prj vi-mode notify cap ruby brew bundler)
 
 source $ZSH/oh-my-zsh.sh
 
 # Example aliases
 source $HOME/.zsh-aliases
 source $HOME/.zsh-local
-
 
 # Customize to your needs...
