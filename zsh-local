@@ -8,4 +8,7 @@ export LC_ALL=en_US.UTF-8
 export SYS_NOTIFIER=/usr/local/bin/terminal-notifier
 
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
+export PATH="/usr/local/cuda/bin:/Applications/Shoes.app/Contents/MacOS:usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+[[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh" # This loads NVM
+[[ -r $NVM_DIR/bash_completion ]] && source "$NVM_DIR/bash_completion"

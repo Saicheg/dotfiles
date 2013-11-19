@@ -47,6 +47,7 @@ Bundle 'mustache.vim'
 Bundle 'thoughtbot/vim-rspec'
 Bundle "Chiel92/vim-autoformat"
 Bundle "briancollins/vim-jst"
+Bundle 'jade.vim'
 
 " Colorschemes
 Bundle 'flazz/vim-colorschemes'
@@ -188,3 +189,11 @@ nnoremap <leader>fw :Ack <c-r><c-w><CR>
 " Syntastic
 let g:syntastic_ruby_exec = "/Users/sai/.rvm/rubies/ruby-2.0.0-p247/bin/ruby"
 let g:syntastic_eruby_checkers=['mri']
+
+" run ruby files
+function RunWith (command)
+  execute "w"
+  execute "!clear;" . a:command . " " . expand("%")
+endfunction
+
+autocmd FileType ruby nmap <Leader>e :call RunWith("ruby")<cr>

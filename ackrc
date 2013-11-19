@@ -4,6 +4,7 @@
 --type-add=js=.rjs,.js.erb,.coffee,.js.coffee
 --type-add=xml=.xml.builder
 --ignore-dir=vendor
+--ignore-dir=node_modules
 --ignore-dir=log
 --ignore-dir=tmp
 --ignore-dir=doc
