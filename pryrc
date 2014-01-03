@@ -31,9 +31,9 @@ def a
   (1..20).to_a
 end
 
-def h
-  {:hello => "world", :free => "of charge"}
-end
+# def h
+#   {:hello => "world", :free => "of charge"}
+# end
 
 ## Benchmarking
 # Inspired by <http://stackoverflow.com/questions/123494/whats-your-favourite-irb-trick/123834#123834>.

@@ -1,6 +1,4 @@
 # Rails
-alias rs="rails server"
-alias rc="rails console"
 alias rr="rake routes"
 alias rrg="rake routes | grep "
 
