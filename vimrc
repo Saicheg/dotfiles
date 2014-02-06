@@ -152,7 +152,7 @@ let g:NERDTreeDirArrows = 0
 let NERDTreeShowHidden=1
 let g:nerdtree_tabs_focus_on_files = 1
 let g:nerdtree_tabs_autoclose = 1
-let NERDTreeIgnore = ['\.git$', '\.DS_Store$']
+let NERDTreeIgnore = ['\.git$', '\.DS_Store$', '\.bundle$']
 map <Leader>n :NERDTreeTabsToggle<CR>
 
 " vim-nerdtree-tabs.vim
@@ -198,3 +198,9 @@ function RunWith (command)
 endfunction
 
 autocmd FileType ruby nmap <Leader>e :call RunWith("ruby")<cr>
+
+if has("syntax")
+  au BufNewFile,BufRead *.jsonify set filetype=ruby
+  au BufNewFile,BufRead *.skim    set filetype=slim
+  au BufNewFile,BufRead *.ast     set filetype=slim
+endif
