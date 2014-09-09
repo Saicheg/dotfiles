@@ -30,6 +30,9 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(gitfast rvm npm rake gem bundler dircycle vi-mode notify cap ruby brew autojump coffee custom-aliases rails redis-cli sublime)
 
+bindkey -v
+bindkey '^R' history-incremental-search-backward
+
 source $ZSH/oh-my-zsh.sh
 
 # Example aliases
