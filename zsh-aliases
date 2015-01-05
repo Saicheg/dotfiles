@@ -12,7 +12,7 @@ alias gcd="git checkout --"
 alias grр="git reset HEAD"
 alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold yellow)<%an>%Creset' --abbrev-commit --"
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
-alias glist='for ref in $(git for-each-ref --sort=-committerdate --count=30 --format="%(refname)" refs/heads/ refs/remotes ); do git log -n1 $ref --pretty=format:"%Cgreen%cr%Creset %C(yellow)%d%Creset %C(bold blue)<%an>%Creset%n" | cat ; done | awk '"'! a["'$0'"]++'"
+alias glist='for ref in $(git for-each-ref --sort=-committerdate --count=50 --format="%(refname)" refs/heads/ refs/remotes ); do git log -n1 $ref --pretty=format:"%Cgreen%cr%Creset %C(yellow)%d%Creset %C(bold blue)<%an>%Creset%n" | cat ; done | awk '"'! a["'$0'"]++'"
 
 
 # Zeus

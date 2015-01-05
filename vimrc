@@ -5,59 +5,62 @@ set nocompatible                  " Must come first because it changes other opt
 
 filetype off                       " required by Vundler
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/vundle
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " Plugins
 
-Bundle 'rails.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'tpope/vim-rails'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rvm'
-Bundle 'bbommarito/vim-slim'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-bundler'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'kien/ctrlp.vim'
-Bundle 'vim-scripts/number-marks'
-Bundle 'msanders/snipmate.vim'
-Bundle 'matchit.zip'
-Bundle 'ruby-matchit'
-Bundle 'AndrewRadev/splitjoin.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'vim-scripts/bufkill.vim'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-surround'
-Bundle 'vim-scripts/tComment'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-surround'
-Bundle 'ZenCoding.vim'
-Bundle 'taglist.vim'
-Bundle 'Syntastic'
-Bundle 'ack.vim'
-Bundle 'mustache.vim'
-Bundle 'thoughtbot/vim-rspec'
-Bundle "Chiel92/vim-autoformat"
-Bundle "briancollins/vim-jst"
-Bundle 'jade.vim'
+Plugin 'rails.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rvm'
+Plugin 'bbommarito/vim-slim'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-bundler'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'kien/ctrlp.vim'
+Plugin 'vim-scripts/number-marks'
+Plugin 'msanders/snipmate.vim'
+Plugin 'matchit.zip'
+Plugin 'ruby-matchit'
+Plugin 'AndrewRadev/splitjoin.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'vim-scripts/bufkill.vim'
+Plugin 'tpope/vim-repeat'
+Plugin 'vim-scripts/tComment'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-surround'
+Plugin 'ZenCoding.vim'
+Plugin 'taglist.vim'
+Plugin 'Syntastic'
+Plugin 'ack.vim'
+Plugin 'mustache.vim'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'Chiel92/vim-autoformat'
+Plugin 'briancollins/vim-jst'
+Plugin 'jade.vim'
+Plugin 'greplace.vim'
 
 " Colorschemes
-Bundle 'flazz/vim-colorschemes'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'ColorSchemeMenuMaker'
-Bundle 'desert-warm-256'
-Bundle 'darkspectrum'
-Bundle 'tomasr/molokai'
-Bundle 'jpo/vim-railscasts-theme'
-Bundle 'croaker/mustang-vim'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'Solarized'
+Plugin 'ColorSchemeMenuMaker'
+Plugin 'desert-warm-256'
+Plugin 'darkspectrum'
+Plugin 'tomasr/molokai'
+Plugin 'jpo/vim-railscasts-theme'
+Plugin 'croaker/mustang-vim'
+
+call vundle#end()            " required
 "
 " General settings
 "
@@ -188,7 +191,7 @@ set grepprg=ack
 nnoremap <leader>fw :Ack <c-r><c-w><CR>
 
 " Syntastic
-let g:syntastic_ruby_exec = "/Users/sai/.rvm/rubies/ruby-2.0.0-p247/bin/ruby"
+let g:syntastic_ruby_exec = "/Users/sai/.rvm/rubies/ruby-2.1.3/bin/ruby"
 let g:syntastic_eruby_checkers=['mri']
 
 " run ruby files

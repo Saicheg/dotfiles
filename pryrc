@@ -6,6 +6,13 @@ Pry.config.prompt = [proc{"? "}, proc{"| "}]
 # Pry.config.input = STDIN
 # Pry.config.output = STDOUT
 
+begin
+  require 'awesome_print'
+  Pry.config.print = proc { |output, value| Pry::Helpers::BaseHelpers.stagger_output("=> #{value.ai}\n", output) }
+rescue LoadError => err
+  puts "no awesome_print :("
+end
+
 if defined?(ActiveRecord::Base)
 
   # Get random object
@@ -29,6 +36,10 @@ end
 
 def a
   (1..20).to_a
+end
+
+def clean
+  puts "\e[H\e[2J"
 end
 
 # def h

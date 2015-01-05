@@ -37,3 +37,6 @@ source $HOME/.zsh-aliases
 source $HOME/.zsh-local
 
 # Customize to your needs...
+
+source ~/.profile
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
