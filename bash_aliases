@@ -3,7 +3,6 @@ alias grep='grep --color=auto'
 alias c="clear"
 alias ie7="wine 'C:\Program Files\Internet Explorer\iexplore'"
 alias frspec="SKIP_SLOW=true rspec"
-alias shoes="~/Programs/shoes/dist/shoes"
 
 # Rails
 alias rs="rails server"
@@ -18,20 +17,9 @@ alias gs="git status"
 alias ga="git add"
 alias gc="git checkout"
 alias gd="git diff --color"
-alias gcd="git checkout --"
 alias grр="git reset HEAD"
 alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold yellow)<%an>%Creset' --abbrev-commit --"
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
-
-# RMO
-alias rmo-cd="cd ~/Projects/RentMineOnline/;"
-
-# Zeus
-alias zs='zeus server'
-alias zr='zeus rake'
-alias zg='zeus generate'
-alias zc='zeus console'
-alias zt='zeus rspec'
 
 # Fix tmux vim color
 alias tmux="TERM=screen-256color-bce tmux"
