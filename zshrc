@@ -34,7 +34,7 @@ plugins=(gitfast rvm npm rake gem bundler dircycle vi-mode notify cap ruby brew 
 
 bindkey -v
 bindkey '^R' history-incremental-search-backward
-bindkey '^A' beginning-of-line
+bindkey '^Q' beginning-of-line
 bindkey '^E' end-of-line
 
 source $ZSH/oh-my-zsh.sh
