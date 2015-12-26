@@ -1,15 +1,11 @@
-"
-" Vundle setup
-"
 set nocompatible                  " Must come first because it changes other options.
-
 filetype off                       " required by Vundler
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
 
@@ -19,7 +15,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rvm'
-Plugin 'bbommarito/vim-slim'
+Plugin 'slim-template/vim-slim'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-bundler'
@@ -43,12 +39,13 @@ Plugin 'ZenCoding.vim'
 Plugin 'taglist.vim'
 Plugin 'Syntastic'
 Plugin 'ack.vim'
-Plugin 'mustache.vim'
+Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'briancollins/vim-jst'
 Plugin 'jade.vim'
 Plugin 'greplace.vim'
+Plugin 'fatih/vim-go'
 
 " Colorschemes
 Plugin 'flazz/vim-colorschemes'
@@ -66,6 +63,8 @@ call vundle#end()            " required
 "
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
+
+
 set nobackup  " Don't make a backup before overwriting a file.
 set nowritebackup " And again
 set noswapfile  " Don't create swap file
@@ -193,6 +192,8 @@ nnoremap <leader>fw :Ack <c-r><c-w><CR>
 " Syntastic
 let g:syntastic_ruby_exec = "/Users/sai/.rvm/rubies/ruby-2.1.3/bin/ruby"
 let g:syntastic_eruby_checkers=['mri']
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
 " run ruby files
 function RunWith (command)
@@ -207,3 +208,10 @@ if has("syntax")
   au BufNewFile,BufRead *.skim    set filetype=slim
   au BufNewFile,BufRead *.ast     set filetype=slim
 endif
+
+" Go plugin configuration
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1

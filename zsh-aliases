@@ -37,3 +37,4 @@ alias paralells='sudo rm /Library/Preferences/Parallels/licenses.xml /private/va
 
 # Capistrano
 alias cpd="cap production deploy"
+alias csd="cap staging deploy"

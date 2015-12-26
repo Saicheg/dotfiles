@@ -32,6 +32,10 @@ if defined?(Rails) && Rails.respond_to?(:logger)
   end
 end
 
+if defined?(Apartment)
+  Apartment::Tenant.switch!("presli")
+end
+
 # Useful collections
 
 def a
