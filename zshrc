@@ -2,7 +2,6 @@
 ZSH=$HOME/.oh-my-zsh
 
 export EDITOR=vim
-export DOCKER_HOST=tcp://localhost:4243
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -30,12 +29,10 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(gitfast rvm npm rake gem bundler dircycle vi-mode notify cap ruby brew autojump coffee custom-aliases rails redis-cli sublime)
+plugins=(gitfast rvm npm rake gem bundler dircycle vi-mode notify cap ruby brew autojump coffee custom-aliases rails redis-cli)
 
 bindkey -v
 bindkey '^R' history-incremental-search-backward
-bindkey '^Q' beginning-of-line
-bindkey '^E' end-of-line
 
 source $ZSH/oh-my-zsh.sh
 

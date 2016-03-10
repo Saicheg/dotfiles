@@ -1,3 +1,6 @@
+# Bash
+alias ll="ls -l"
+
 # Rails
 alias rr="rake routes"
 alias rrg="rake routes | grep "
@@ -23,11 +26,8 @@ alias v='vim'
 alias flush-sidekiq="echo 'flushdb' | redis-cli"
 alias sidekiq-start="flush-sidekiq && sidekiq -C config/sidekiq.yml"
 
-# Capistrano
-alias cpd="cap production deploy"
-
 # Tmux
 alias tn="tmux new -s"
-alias ta="tmux attack -t"
+alias ta="tmux attach -t"
 alias ts="tmux switch -t"
 alias tsessions="tmux list-sessions"
