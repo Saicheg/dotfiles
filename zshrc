@@ -41,3 +41,5 @@ source $HOME/.zsh-aliases
 source $HOME/.zsh-local
 
 # Customize to your needs...
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
