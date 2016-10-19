@@ -31,3 +31,6 @@ alias tn="tmux new -s"
 alias ta="tmux attach -t"
 alias ts="tmux switch -t"
 alias tsessions="tmux list-sessions"
+
+# BFG - clean git history
+alias bfg="java -jar ~/Library/bfg-1.12.13.jar"
