@@ -46,6 +46,7 @@ Plugin 'briancollins/vim-jst'
 Plugin 'jade.vim'
 Plugin 'greplace.vim'
 Plugin 'fatih/vim-go'
+Plugin 'git://github.com/leafgarland/typescript-vim'
 
 " Colorschemes
 Plugin 'flazz/vim-colorschemes'
@@ -190,7 +191,7 @@ set grepprg=ack
 nnoremap <leader>fw :Ack <c-r><c-w><CR>
 
 " Syntastic
-let g:syntastic_ruby_exec = "/Users/sai/.rvm/rubies/ruby-2.1.3/bin/ruby"
+let g:syntastic_ruby_exec = "/Users/sai/.rvm/rubies/ruby-2.4.0/bin/ruby"
 let g:syntastic_eruby_checkers=['mri']
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }

@@ -10,7 +10,8 @@ export LANGUAGE=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export SYS_NOTIFIER=/usr/local/bin/terminal-notifier
-
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOPATH/bin
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 export PATH="/usr/local/cuda/bin:/Applications/Shoes.app/Contents/MacOS:usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
