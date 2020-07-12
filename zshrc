@@ -28,7 +28,7 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(gitfast rvm npm rake gem bundler dircycle vi-mode notify cap ruby brew autojump coffee custom-aliases rails redis-cli sublime)
+plugins=(gitfast rvm npm rake gem bundler dircycle vi-mode notify cap ruby autojump coffee custom-aliases rails redis-cli sublime)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -40,3 +40,11 @@ source $HOME/.zsh-local
 
 source ~/.profile
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$(brew --prefix qt)/bin
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
