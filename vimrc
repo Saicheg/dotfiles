@@ -47,6 +47,15 @@ Plugin 'jade.vim'
 Plugin 'greplace.vim'
 Plugin 'fatih/vim-go'
 Plugin 'git://github.com/leafgarland/typescript-vim'
+Plugin 'posva/vim-vue'
+Plugin 'kristijanhusak/vim-carbon-now-sh'
+" Plugin 'hwartig/vim-seeing-is-believing'
+Plugin 'tasn/vim-tsx'
+Plugin 'prabirshrestha/async.vim'
+Plugin 'prabirshrestha/vim-lsp'
+Plugin 'mattn/vim-lsp-settings'
+Plugin 'prabirshrestha/asyncomplete-lsp.vim'
+Plugin 'prabirshrestha/asyncomplete-gocode.vim'
 
 " Colorschemes
 Plugin 'flazz/vim-colorschemes'
@@ -114,7 +123,7 @@ set visualbell			  " No beeping
 
 set wildmenu			  " Enhanced command line completion
 set wildmode=list:longest 	  " Complete files like a shell
-set wildignore+=*/.git/*,*/tmp/*,*/log/*,*/app/assets/images/*,*/vendor/assets/images/*,*/coverage/*
+set wildignore+=*/.git/*,*/tmp/*,*/log/*,*/images/*,*/coverage/*,*/node_modules/*,*/public/assets/*,*/public/packs/*,*/public/uploads/*,*/public/cache/*
 
 set t_Co=256
 colorscheme mustang
@@ -136,6 +145,8 @@ nnoremap <C-left> :vertical resize +3<cr>
 nnoremap <C-down> :resize +3<cr>
 nnoremap <C-up> :resize -3<cr>
 nnoremap <C-right> :vertical resize -3<cr>
+
+"
 " Plugin settngs
 "
 
@@ -191,7 +202,7 @@ set grepprg=ack
 nnoremap <leader>fw :Ack <c-r><c-w><CR>
 
 " Syntastic
-let g:syntastic_ruby_exec = "/Users/sai/.rvm/rubies/ruby-2.4.0/bin/ruby"
+let g:syntastic_ruby_exec = "/Users/sai/.rvm/rubies/ruby-2.5.1/bin/ruby"
 let g:syntastic_eruby_checkers=['mri']
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
