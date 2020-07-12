@@ -3,6 +3,7 @@
 --type-add=html=.rhtml,.html.erb,.html.haml,.haml,.slim,.html.slim,.eco,.skim
 --type-add=js=.rjs,.js.erb,.coffee,.js.coffee
 --type-add=xml=.xml.builder
+--ignore-dir=.bundle
 --ignore-dir=vendor
 --ignore-dir=node_modules
 --ignore-dir=log
@@ -13,6 +14,7 @@
 --ignore-dir=spec/cassettes
 --ignore-dir=app/assets/javascripts/i18n/
 --ignore-dir=public/javascripts/
+--ignore-dir=public/packs/
 --ignore-dir=bower_components/
 --ignore-dir=node_modules/
 --ignore-dir=dist/
