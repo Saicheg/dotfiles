@@ -1,73 +1,61 @@
 set nocompatible                  " Must come first because it changes other options.
 filetype off                       " required by Vundler
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " Plugins
-
-Plugin 'rails.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'tpope/vim-rails'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-rvm'
-Plugin 'slim-template/vim-slim'
-Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-git'
-Plugin 'tpope/vim-bundler'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'kien/ctrlp.vim'
-Plugin 'vim-scripts/number-marks'
-Plugin 'msanders/snipmate.vim'
-Plugin 'matchit.zip'
-Plugin 'ruby-matchit'
-Plugin 'AndrewRadev/splitjoin.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'Lokaltog/vim-powerline'
-Plugin 'vim-scripts/bufkill.vim'
-Plugin 'tpope/vim-repeat'
-Plugin 'vim-scripts/tComment'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-surround'
-Plugin 'ZenCoding.vim'
-Plugin 'taglist.vim'
-Plugin 'Syntastic'
-Plugin 'ack.vim'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'Chiel92/vim-autoformat'
-Plugin 'briancollins/vim-jst'
-Plugin 'jade.vim'
-Plugin 'greplace.vim'
-Plugin 'fatih/vim-go'
-Plugin 'git://github.com/leafgarland/typescript-vim'
-Plugin 'posva/vim-vue'
-Plugin 'kristijanhusak/vim-carbon-now-sh'
-" Plugin 'hwartig/vim-seeing-is-believing'
-Plugin 'tasn/vim-tsx'
-Plugin 'prabirshrestha/async.vim'
-Plugin 'prabirshrestha/vim-lsp'
-Plugin 'mattn/vim-lsp-settings'
-Plugin 'prabirshrestha/asyncomplete-lsp.vim'
-Plugin 'prabirshrestha/asyncomplete-gocode.vim'
+Plug 'vim-scripts/rails.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'kchmck/vim-coffee-script'
+Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rvm'
+Plug 'slim-template/vim-slim'
+Plug 'tpope/vim-haml'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-bundler'
+Plug 'altercation/vim-colors-solarized'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'kien/ctrlp.vim'
+Plug 'vim-scripts/number-marks'
+Plug 'msanders/snipmate.vim'
+Plug 'vim-scripts/matchit.zip'
+Plug 'vim-scripts/ruby-matchit'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-scripts/bufkill.vim'
+Plug 'tpope/vim-repeat'
+Plug 'vim-scripts/tComment'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-surround'
+Plug 'mattn/emmet-vim'
+Plug 'vim-scripts/taglist.vim'
+Plug 'mileszs/ack.vim'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'thoughtbot/vim-rspec'
+Plug 'Chiel92/vim-autoformat'
+Plug 'majutsushi/tagbar'
+Plug 'briancollins/vim-jst'
+" Plug 'jade.vim'
+Plug 'fatih/vim-go'
+Plug 'git://github.com/leafgarland/typescript-vim'
+Plug 'posva/vim-vue'
+Plug 'kristijanhusak/vim-carbon-now-sh'
+Plug 'tasn/vim-tsx'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'prabirshrestha/asyncomplete-gocode.vim'
 
 " Colorschemes
-Plugin 'flazz/vim-colorschemes'
-Plugin 'Solarized'
-Plugin 'ColorSchemeMenuMaker'
-Plugin 'desert-warm-256'
-Plugin 'darkspectrum'
-Plugin 'tomasr/molokai'
-Plugin 'jpo/vim-railscasts-theme'
-Plugin 'croaker/mustang-vim'
+Plug 'flazz/vim-colorschemes'
 
-call vundle#end()            " required
+call plug#end()
+
 "
 " General settings
 "
@@ -194,20 +182,14 @@ cnoreabbrev bd BD
 nmap sjj :SplitjoinJoin<CR>
 nmap sjs :SplitjoinSplit<CR>
 
-" vim-powerline.vim
-" let g:Powerline_symbols='skwp'
+" vim-airline
+let g:airline_theme='atomic'
 
 " Ack
 set grepprg=ack
 nnoremap <leader>fw :Ack <c-r><c-w><CR>
 
-" Syntastic
-let g:syntastic_ruby_exec = "/Users/sai/.rvm/rubies/ruby-2.5.1/bin/ruby"
-let g:syntastic_eruby_checkers=['mri']
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
-
-" run ruby files
+" Run ruby files
 function RunWith (command)
   execute "w"
   execute "!clear;" . a:command . " " . expand("%")
