@@ -14,8 +14,12 @@
 --ignore-dir=spec/cassettes
 --ignore-dir=app/assets/javascripts/i18n/
 --ignore-dir=public/javascripts/
+--ignore-dir=public/uploads
+--ignore-dir=server/images/
+--ignore-dir=images/
 --ignore-dir=public/packs/
 --ignore-dir=bower_components/
 --ignore-dir=node_modules/
 --ignore-dir=dist/
+--ignore-dir=.next/
 --sort-files
