@@ -5,21 +5,21 @@ call plug#begin('~/.vim/plugged')
 
 " Plugins
 Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
+" Plug 'jistr/vim-nerdtree-tabs'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'kchmck/vim-coffee-script'
+" Plug 'kchmck/vim-coffee-script'
 Plug 'tpope/vim-rails'
 " Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rvm'
-Plug 'slim-template/vim-slim'
-Plug 'tpope/vim-haml'
-Plug 'tpope/vim-git'
-Plug 'tpope/vim-bundler'
+" Plug 'tpope/vim-rvm'
+" Plug 'slim-template/vim-slim'
+" Plug 'tpope/vim-haml'
+" Plug 'tpope/vim-git'
+" Plug 'tpope/vim-bundler'
 Plug 'kien/ctrlp.vim'
 Plug 'vim-scripts/number-marks'
-Plug 'vim-scripts/matchit.zip'
-Plug 'vim-scripts/ruby-matchit'
+" Plug 'vim-scripts/matchit.zip'
+" Plug 'vim-scripts/ruby-matchit'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/bufkill.vim'
@@ -28,25 +28,22 @@ Plug 'vim-scripts/tComment'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-surround'
-Plug 'mattn/emmet-vim'
-Plug 'vim-scripts/taglist.vim'
+" Plug 'mattn/emmet-vim'
+" Plug 'vim-scripts/taglist.vim'
 Plug 'mileszs/ack.vim'
-Plug 'mustache/vim-mustache-handlebars'
-Plug 'thoughtbot/vim-rspec'
-Plug 'Chiel92/vim-autoformat'
-Plug 'majutsushi/tagbar'
-Plug 'briancollins/vim-jst'
-Plug 'digitaltoad/vim-pug'
-" Plug 'git://github.com/leafgarland/typescript-vim'
-" Plug 'posva/vim-vue'
+" Plug 'mustache/vim-mustache-handlebars'
+" Plug 'thoughtbot/vim-rspec'
+" Plug 'Chiel92/vim-autoformat'
+" Plug 'majutsushi/tagbar'
+" Plug 'briancollins/vim-jst'
+" Plug 'digitaltoad/vim-pug'
 Plug 'kristijanhusak/vim-carbon-now-sh'
-" Plug 'tasn/vim-tsx'
-" Plug 'prabirshrestha/async.vim'
-" Plug 'prabirshrestha/vim-lsp'
-" Plug 'mattn/vim-lsp-settings'
-" Plug 'prabirshrestha/asyncomplete-lsp.vim'
-" Plug 'prabirshrestha/asyncomplete-gocode.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'leafgarland/typescript-vim'
+" Plug 'peitalin/vim-jsx-typescript'
+Plug 'github/copilot.vim'
+Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
+Plug 'jparise/vim-graphql'
 
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
@@ -59,6 +56,7 @@ call plug#end()
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
+let g:editorconfig = v:false
 
 set nobackup  " Don't make a backup before overwriting a file.
 set nowritebackup " And again
@@ -97,10 +95,10 @@ autocmd BufWritePre * :call TrimWhiteSpace()
 "
 " View
 "
-set number 			  " Show line numbers
+set number 			      " Show line numbers
 set laststatus=2		  " Show the status line all the time
 set showtabline=2		  " Show tabs bar
-set incsearch			  " Highlight matches as you type
+set incsearch			    " Highlight matches as you type
 set nohlsearch			  " Highlight matches
 
 set showcmd 			  " Display incomplete commands
@@ -137,7 +135,39 @@ nnoremap <C-right> :vertical resize -3<cr>
 " Plugin settings
 "
 
+"
 " COC
+"
+let g:coc_global_extensions = [
+\   'coc-solargraph',
+\   'coc-spell-checker',
+\   'coc-clangd',
+\   'coc-rls',
+\   'coc-metals',
+\   'coc-docker',
+\   'coc-phpls',
+\   'coc-java',
+\   'coc-groovy',
+\   'coc-java-debug',
+\   'coc-scssmodules',
+\   'coc-css',
+\   'coc-html',
+\   'coc-webpack',
+\   'coc-flow',
+\   'coc-styled-components',
+\   'coc-jest',
+\   'coc-inline-jest',
+\   'coc-import-cost',
+\   'coc-prettier',
+\   'coc-tsserver',
+\   'coc-eslint',
+\   'coc-snippets',
+\   'coc-json',
+\   'coc-github'
+\ ]
+
+
+
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
@@ -160,6 +190,11 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+" Install prettier
+" if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+"   let g:coc_global_extensions += ['coc-prettier']
+" endif
+
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
@@ -174,28 +209,29 @@ endfunction
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-" Add (Neo)Vim's native statusline support.
-" NOTE: Please see `:h coc-status` for integrations with external plugins that
-" provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
 " SplitJoin
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
 
 " NERDTree
-let g:nerdtree_tabs_open_on_console_startup=1
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeWinSize = 40
-let g:NERDTreeDirArrows = 0
-let NERDTreeShowHidden=1
-let g:nerdtree_tabs_focus_on_files = 1
-let g:nerdtree_tabs_autoclose = 1
+" Start NERDTree. If a file is specified, move the cursor to its window.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+
+" Close the tab if NERDTree is the only window remaining in it.
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+let NERDTreeMinimalUI = 1
+let NERDTreeWinSize = 35
+let NERDTreeDirArrows = 0
+let NERDTreeShowHidden = 1
+let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeIgnore = ['\.git$', '\.DS_Store$', '\.bundle$']
-map <Leader>n :NERDTreeTabsToggle<CR>
+
+map <Leader>n :NERDTreeToggle<CR>
 
 " vim-nerdtree-tabs.vim
-let g:nerdtree_tabs_autoclose=1
+" let g:nerdtree_tabs_autoclose=1
 
 " CtrlP
 let g:ctrlp_map = '<c-p>'
@@ -210,10 +246,12 @@ map <C-T> :CtrlPBuffer<CR>
 map <Leader>rs :call RunCurrentSpecFile()<CR>
 
 " coffeescript.vim
-au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
+" au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 
 " bufkill.vim
 cnoreabbrev bd BD
+
+
 
 " splitjoin
 nmap sjj :SplitjoinJoin<CR>
@@ -235,9 +273,10 @@ endfunction
 autocmd FileType ruby nmap <Leader>e :call RunWith("ruby")<cr>
 
 if has("syntax")
-  au BufNewFile,BufRead *.jsonify set filetype=ruby
-  au BufNewFile,BufRead *.skim    set filetype=slim
-  au BufNewFile,BufRead *.ast     set filetype=slim
+  au BufNewFile,BufRead *.jsonify  set filetype=ruby
+  au BufNewFile,BufRead *.decorate set filetype=ruby
+  au BufNewFile,BufRead *.skim     set filetype=slim
+  au BufNewFile,BufRead *.ast      set filetype=slim
 endif
 
 " Go plugin configuration
