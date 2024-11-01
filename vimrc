@@ -5,21 +5,13 @@ call plug#begin('~/.vim/plugged')
 
 " Plugins
 Plug 'scrooloose/nerdtree'
-" Plug 'jistr/vim-nerdtree-tabs'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'kchmck/vim-coffee-script'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
 Plug 'tpope/vim-rails'
-" Plug 'vim-ruby/vim-ruby'
-" Plug 'tpope/vim-rvm'
-" Plug 'slim-template/vim-slim'
-" Plug 'tpope/vim-haml'
-" Plug 'tpope/vim-git'
-" Plug 'tpope/vim-bundler'
 Plug 'kien/ctrlp.vim'
 Plug 'vim-scripts/number-marks'
-" Plug 'vim-scripts/matchit.zip'
-" Plug 'vim-scripts/ruby-matchit'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/bufkill.vim'
@@ -28,25 +20,15 @@ Plug 'vim-scripts/tComment'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-surround'
-" Plug 'mattn/emmet-vim'
-" Plug 'vim-scripts/taglist.vim'
 Plug 'mileszs/ack.vim'
-" Plug 'mustache/vim-mustache-handlebars'
-" Plug 'thoughtbot/vim-rspec'
-" Plug 'Chiel92/vim-autoformat'
-" Plug 'majutsushi/tagbar'
-" Plug 'briancollins/vim-jst'
-" Plug 'digitaltoad/vim-pug'
 Plug 'kristijanhusak/vim-carbon-now-sh'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'leafgarland/typescript-vim'
-" Plug 'peitalin/vim-jsx-typescript'
 Plug 'github/copilot.vim'
-Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
 Plug 'jparise/vim-graphql'
 
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
+" Plug 'Tsuzat/NeoSolarized.nvim', { 'branch': 'master' }
+" Plug 'craftzdog/solarized-osaka.nvim'
 
 call plug#end()
 
@@ -112,6 +94,8 @@ set wildignore+=*/.git/*,*/tmp/*,*/log/*,*/images/*,*/coverage/*,*/node_modules/
 
 set t_Co=256
 colorscheme mustang
+" colorscheme NeoSolarized
+" colorscheme solarized-osaka
 
 "
 " Maps
@@ -160,7 +144,6 @@ let g:coc_global_extensions = [
 \   'coc-import-cost',
 \   'coc-prettier',
 \   'coc-tsserver',
-\   'coc-eslint',
 \   'coc-snippets',
 \   'coc-json',
 \   'coc-github'
@@ -189,11 +172,6 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-
-" Install prettier
-" if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
-"   let g:coc_global_extensions += ['coc-prettier']
-" endif
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -251,8 +229,6 @@ map <Leader>rs :call RunCurrentSpecFile()<CR>
 " bufkill.vim
 cnoreabbrev bd BD
 
-
-
 " splitjoin
 nmap sjj :SplitjoinJoin<CR>
 nmap sjs :SplitjoinSplit<CR>
@@ -263,14 +239,6 @@ let g:airline_theme='powerlineish'
 " Ack
 set grepprg=ack
 nnoremap <leader>fw :Ack <c-r><c-w><CR>
-
-" Run ruby files
-function RunWith (command)
-  execute "w"
-  execute "!clear;" . a:command . " " . expand("%")
-endfunction
-
-autocmd FileType ruby nmap <Leader>e :call RunWith("ruby")<cr>
 
 if has("syntax")
   au BufNewFile,BufRead *.jsonify  set filetype=ruby
