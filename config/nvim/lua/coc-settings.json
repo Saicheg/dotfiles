@@ -1,0 +1,16 @@
+{
+  "snippets.ultisnips.pythonPrompt": false,
+  "jedi.workspace.environmentPath": "/Users/saicheg/.pyenv/versions/narrative/bin/python",
+  "jedi.workspace.extraPaths": ["src"],
+
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "json",
+    "yaml"
+  ]
+}
