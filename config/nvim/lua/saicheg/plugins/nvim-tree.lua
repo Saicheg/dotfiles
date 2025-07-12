@@ -21,7 +21,7 @@ return {
         },
       },
       filters = {
-        custom = { ".DS_Store", "__pycache__", ".pytest_cache", ".venv", ".git" },
+        custom = { ".DS_Store", "__pycache__", ".pytest_cache", "*.egg-info", ".venv", ".git" },
         exclude = { ".github", ".gitignore", ".gitmodules", ".gitattributes" },
       },
       git = {

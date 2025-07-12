@@ -12,3 +12,7 @@ alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%
 # Vim
 alias v='vim'
 alias vim='nvim'
+
+# Docker
+alias d="docker compose"
+alias dc="docker compose"

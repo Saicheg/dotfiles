@@ -5,8 +5,24 @@ return {
   version = false, -- set this if you want to always pull the latest change
   opts = {
     provider = "copilot",
-    auto_suggestions_provider = "copilot",
+    -- auto_suggestions_provider = "lmstudio",
     -- add any opts here
+    -- vendors = {
+    --   lmstudio = {
+    --     __inherited_from = "openai",
+    --     api_key_name = "",
+    --     endpoint = "http://localhost:1234/v1/",
+    --     model = "qwen2.5-coder-3b-instruct"
+    --   },
+    -- },
+    -- behaviour = {
+    --   auto_suggestions = true,
+    -- },
+    mappings = {
+      suggestion = {
+        accept = "<Tab>",
+      },
+    },
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
   build = "make",

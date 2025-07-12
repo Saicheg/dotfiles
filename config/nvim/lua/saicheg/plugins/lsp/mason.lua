@@ -34,7 +34,7 @@ return {
         "lua_ls",
         "graphql",
         "rubocop",
-        "pylsp",
+        -- "pylsp",
         "pyright",
         "solargraph",
       },

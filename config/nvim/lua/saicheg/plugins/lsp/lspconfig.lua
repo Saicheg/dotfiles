@@ -99,18 +99,18 @@ return {
     })
 
     -- configure python server
-    lspconfig["pyright"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-      filetypes = { "python" },
-    })
+    -- lspconfig["pyright"].setup({
+    --   capabilities = capabilities,
+    --   on_attach = on_attach,
+    --   filetypes = { "python" },
+    -- })
 
-    -- configure python server
-    lspconfig["pylsp"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-      filetypes = { "python" },
-    })
+    -- -- configure python server
+    -- lspconfig["pylsp"].setup({
+    --   capabilities = capabilities,
+    --   on_attach = on_attach,
+    --   filetypes = { "python" },
+    -- })
 
     -- configure lua server (with special settings)
     lspconfig["lua_ls"].setup({
