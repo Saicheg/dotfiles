@@ -5,6 +5,7 @@ export SYS_NOTIFIER=/usr/local/bin/terminal-notifier
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
+export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 [[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh" # This loads NVM

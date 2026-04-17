@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+repo="$(cd "$(dirname "$0")/.." && pwd)"
+
+link() {
+  local src="$repo/$1"
+  local dest="$HOME/$2"
+
+  if [ -L "$dest" ] && [ "$(readlink "$dest")" = "$src" ]; then
+    printf "ok       %s\n" "$dest"
+    return
+  fi
+
+  if [ -e "$dest" ] || [ -L "$dest" ]; then
+    printf "skip     %s (already exists)\n" "$dest"
+    return
+  fi
+
+  mkdir -p "$(dirname "$dest")"
+  ln -s "$src" "$dest"
+  printf "linked   %s -> %s\n" "$dest" "$src"
+}
+
+link gemrc        .gemrc
+link gitignore    .gitignore
+link tmux.conf    .tmux.conf
+link zshrc        .zshrc
+link zsh-aliases  .zsh-aliases
+link zsh-local    .zsh-local
+link config/nvim  .config/nvim
