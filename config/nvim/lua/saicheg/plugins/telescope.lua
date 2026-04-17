@@ -5,10 +5,12 @@ return {
     "nvim-lua/plenary.nvim",
     { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
     "nvim-tree/nvim-web-devicons",
+    "smilovanovic/telescope-search-dir-picker.nvim",
   },
   config = function()
     local telescope = require("telescope")
     local actions = require("telescope.actions")
+
 
     -- from https://github.com/ThePrimeagen/harpoon/discussions/592
     -- local harpoon_add_mark = function(prompt_bufnr)
@@ -101,12 +103,13 @@ return {
     telescope.load_extension("egrepify")
     telescope.load_extension("undo")
     telescope.load_extension("noice")
-
+    telescope.load_extension("search_dir_picker")
 
     -- set keymaps
     local keymap = vim.keymap -- for conciseness
 
     keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
+    keymap.set("n", "<leader>fd", "<cmd>Telescope search_dir_picker<cr>", { desc = "Fuzzy find files in folder" })
     keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
     keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
     keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
